@@ -1,4 +1,6 @@
 # README.md
+## 說明
+* 這個實驗室用來量測目前有多少台NAT支援SCTP(Stream Control Transmission Protocol)
 
 ## 安裝與執行指南
 
