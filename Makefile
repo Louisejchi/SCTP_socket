@@ -19,5 +19,5 @@ run:
 clean:
 	@echo "清理安裝的套件..."
 	sudo pip3 uninstall -y pysctp
-	sudo apt-get remove iperf3
+	sudo apt-get remove -y iperf3
 
