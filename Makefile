@@ -6,7 +6,8 @@ install:
 	which python3 || (echo "Python3 未安裝" && exit 1)
 	@echo "安裝 pysctp..."
 	sudo pip3 install pysctp
-
+	@echo "安裝 iperf3..."
+	sudo apt-get install iperf3
 run:
 	@echo "執行 SCTP_socket/client.py..."
 	python3 client.py
