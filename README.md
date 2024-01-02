@@ -10,9 +10,9 @@
 
 1. 確認您的系統已安裝 Python3。
 2. 使用 `sudo pip3 install pysctp` 安裝 `pysctp` 套件。
-3. 執行 `SCTP_socket/client.py`。
-4. 執行 `SCTP_socket/tcp_test.py`。
-5. 執行 `SCTP_socket/sctp_test.py`。
+3. 執行 `python3 SCTP_socket/client.py`。
+4. 執行 `python3 SCTP_socket/tcp_test.py`。
+5. 執行 `python3 SCTP_socket/sctp_test.py`。
 6. 結束後，使用 `sudo pip3 uninstall pysctp` 移除 `pysctp` 套件。
 7. 為確認測試資料地理位置，測試完成之後請填寫表單:`https://forms.gle/4RcVsndVPZyiX5Me7`
 
