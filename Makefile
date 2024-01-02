@@ -7,7 +7,7 @@ install:
 	@echo "安裝 pysctp..."
 	sudo pip3 install pysctp
 	@echo "安裝 iperf3..."
-	sudo apt-get install iperf3
+	sudo apt-get install -y iperf3
 run:
 	@echo "執行 SCTP_socket/client.py..."
 	python3 client.py
@@ -19,4 +19,5 @@ run:
 clean:
 	@echo "清理安裝的套件..."
 	sudo pip3 uninstall -y pysctp
+	sudo apt-get remove iperf3
 
