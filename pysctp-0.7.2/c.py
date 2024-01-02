@@ -5,7 +5,7 @@ import sctp
 client_socket = sctp.sctpsocket_tcp(socket.AF_INET)
 
 # 連線至 server 端
-client_socket.connect(('10.22.24.106', 12111))
+client_socket.connect(('10.22.24.106', 5600))
 
 # 傳送訊息至 server 端
 message = 'Hello, Server!'
