@@ -10,6 +10,10 @@ install:
 run:
 	@echo "執行 SCTP_socket/client.py..."
 	python3 client.py
+	@echo "執行 SCTP_socket/tcp_test.py..."
+	python3 tcp_test.py
+	@echo "執行 SCTP_socket/sctp_test.py..."
+	python3 sctp_test.py
 
 clean:
 	@echo "清理安裝的套件..."
