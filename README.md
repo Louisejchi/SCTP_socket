@@ -2,6 +2,7 @@
 
 ## 安裝與執行指南
 
+* 建議使用 Ubuntu 環境
 * git clone : `git clone https://github.com/Louisejchi/SCTP_socket.git`
 
 1. 確認您的系統已安裝 Python3。
