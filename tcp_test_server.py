@@ -26,11 +26,14 @@ def handle_client(conn, addr):
             port += 1
 
     # iperf3
-    process = subprocess.Popen(['iperf3', '-s', '-p', str(port)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    output, _ = process.communicate()
+    #process = subprocess.Popen(['iperf3', '-s', '-p', str(port)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process = subprocess.Popen(['iperf3', '-s', '-p', str(port)])
+    output, error = process.communicate()
     # output file
-    with open(f'iperf_output_{port}.txt', 'w') as f:
+    with open(f'tcp/iperf_output_{port}.txt', 'w') as f:
         f.write(output.decode())
+        f.write('\n')
+        f.write(error.decode())
 
 def start_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -43,3 +46,5 @@ def start_server():
 
 tcp_thread = threading.Thread(target=start_server)
 tcp_thread.start()
+# Wait for the sctp_thread to finish
+tcp_thread.join()
