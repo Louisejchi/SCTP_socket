@@ -21,7 +21,7 @@
 7. 結束後，使用 `sudo pip3 uninstall pysctp` 移除 `pysctp` 套件。
 8. 結束後，使用 `sudo apt-get remove -y iperf3` 移除 `iperf3`。
 
-您可以使用提供的 `Makefile` 來自動完成以下上步驟：
+您可以使用提供的 `Makefile` 來自動完成以上步驟：
 (需先進入 SCTP_socket 目錄中)
 
 ```bash
