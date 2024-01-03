@@ -28,7 +28,7 @@ def handle_client(conn, addr):
 
     # iperf3
     #process = subprocess.Popen(['iperf3', '-s', '-p', str(port)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    process = subprocess.Popen(['iperf3', '-s', '-p', str(port)])
+    process = subprocess.Popen(['iperf3', '-s', '-p', str(port), '--sctp'])
     output, _ = process.communicate()
     # output file
     with open(f'sctp/iperf_sctp_output_{port}.txt', 'w') as f:
