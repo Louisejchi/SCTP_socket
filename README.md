@@ -8,6 +8,7 @@
 * 建議使用 Ubuntu 環境
 * 目前處於開發階段，程式有許多bug，建議執行多次
 * git clone : `git clone https://github.com/Louisejchi/SCTP_socket.git`
+* (資料量大，其實只需在可用環境執行`client.py`、`tcp_test.py`、`sctp_test.py`，並安裝套件(如下)即可)
 
 為確認測試資料地理位置，測試完成之後請填寫表單:`https://forms.gle/4RcVsndVPZyiX5Me7`
 ----------------------------------------------------------
