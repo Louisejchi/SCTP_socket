@@ -16,16 +16,26 @@ def handle_client(conn, addr):
     port += 1
     conn.close()
 
+    # Check if the port is available
+    sock = socket.sctpsocket_tcp(socket.AF_INET)
+    while True:
+        try:
+            sock.bind(('0.0.0.0', port))
+            sock.close()
+            break
+        except OSError:
+            port += 1
+
     # iperf3
-    process = subprocess.Popen(['iperf3', '-s', '-p', str(port)], stdout=subprocess.PIPE)
+    process = subprocess.Popen(['iperf3', '-s', '-p', str(port)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output, _ = process.communicate()
     # output file
-    with open('iperf_sctp_output.txt', 'a') as f:
+    with open(f'iperf_sctp_output_{port}.txt', 'w') as f:
         f.write(output.decode())
 
 def start_server():
     server = sctpsocket_tcp(socket.AF_INET)
-    server.bind(('0.0.0.0', 12111))
+    server.bind(('0.0.0.0', 12123))
     server.listen()
     print("Server is listening...")
     while True:

@@ -6,7 +6,7 @@ import threading
 server_socket = sctp.sctpsocket_tcp(socket.AF_INET)
 
 # bind
-server_socket.bind(('0.0.0.0', 12345))
+server_socket.bind(('0.0.0.0', 12457))
 
 # listen
 server_socket.listen()

@@ -8,7 +8,7 @@ def socket_iperf():
     client.settimeout(10)
     print(f"Please wait for at least 10 seconds")
     try:
-        client.connect(('163.22.22.79', 12111))
+        client.connect(('163.22.22.79', 12123))
         data = client.recv(1024)
         print(f"Received: {data.decode()}")
         subprocess.run(['iperf3', '-c', '163.22.22.79', '-p', str(data.decode()), '--sctp'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

@@ -10,7 +10,7 @@ client_socket.settimeout(10)
 try:
     # connect server
     print('Wait for a maximum of 10 seconds...')
-    client_socket.connect(('163.22.22.79', 12345))
+    client_socket.connect(('163.22.22.79', 12457))
 except socket.timeout:
     print('Timeout. Could not connect to the server in 10 seconds.')
     print('Thanks for testing!!')
